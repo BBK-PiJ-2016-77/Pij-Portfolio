@@ -22,6 +22,7 @@ public class Matrix {
         matrixTwoD[row][i] = numbers.charAt(i++) - '0';
 
       }
+
     }
   }
 }

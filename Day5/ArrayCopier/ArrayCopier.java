@@ -9,7 +9,6 @@ public class ArrayCopier {
     if(src.length > dst.length) {
       for(int i = 0 ; i <= dst.length - 1 ; i ++){
         dst[i] = src[i];
-
       }
     }else if (src.length < dst.length) {
       for(int i = 0 ; i <= src.length -1; i ++) {

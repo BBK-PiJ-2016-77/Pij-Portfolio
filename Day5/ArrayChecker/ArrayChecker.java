@@ -9,6 +9,7 @@ public class ArrayChecker {
     for(int i = 0, j = intArray.length-1 ; i < j  ; i ++, j--){
 
       if(intArray[i] != intArray[j] ) {
+
         return false;
       }
 
