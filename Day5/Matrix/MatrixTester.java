@@ -11,11 +11,18 @@ public class MatrixTester {
 
     String test = "1234";
     neo.setRow(0,test);
-    System.out.println(neo.matrixTwoD[0][0]);
-    System.out.println(neo.matrixTwoD[0][1]);
-    System.out.println(neo.matrixTwoD[0][2]);
-    System.out.println(neo.matrixTwoD[0][3]);
+   // System.out.println(neo.matrixTwoD[0][0]);
+   // System.out.println(neo.matrixTwoD[0][1]);
+   // System.out.println(neo.matrixTwoD[0][2]);
+   // System.out.println(neo.matrixTwoD[0][3]);
 
+
+    neo.setColumn(0,test);
+    System.out.println(neo.matrixTwoD[0][0]);
+    System.out.println(neo.matrixTwoD[1][0]);
+    System.out.println(neo.matrixTwoD[2][0]);
+   // System.out.println(neo.matrixTwoD[3][0]);
+    System.out.println(neo.toString());
 
   }
 }

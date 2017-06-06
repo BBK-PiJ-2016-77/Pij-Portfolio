@@ -36,7 +36,7 @@ public class TestingClass {
     //int[] bigSrcArr = {1,2,3,4};
     //int[] smallerDstArr = {23,22};
 
-    
+
     //Same array size
     int[] bigSrcArr = {1,2,3,4,5,6,7};
     int[] smallerDstArr = {23,22,21,20,19,18,17};
