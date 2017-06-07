@@ -18,5 +18,6 @@ public class PlayingWithQueue {
     myQueue.retrieve();
     myQueue.size();
     myQueue.retrieve();
+    myQueue.size();
   }
 }

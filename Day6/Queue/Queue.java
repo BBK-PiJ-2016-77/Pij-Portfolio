@@ -9,21 +9,21 @@ public class Queue {
 
 
   public void insert(int newReadRequest) {
-     readRequest = new Request(newReadRequest);
+    readRequest = new Request(newReadRequest);
+    Request temp = lastInQueue;
     lastInQueue = readRequest;
     if(firstToServe == null) {
       firstToServe = readRequest;
+
       System.out.println("Inserting request "+ readRequest.getRequestValue()+ "...");
       return;
     }
-
-    Request temp = firstToServe;
-    while(temp.getRight()!= null) {
-      temp = temp.getRight();
-    }
-    System.out.println("Inserting request "+ readRequest.getRequestValue()+ "...");
+    
     temp.setRight(readRequest);
     readRequest.setLeft(temp);
+
+    System.out.println("Inserting request "+ readRequest.getRequestValue()+ "...");
+
 
   }
 
@@ -33,10 +33,9 @@ public class Queue {
       return;
     }
     if(lastInQueue == temp) {
-      firstToServe = temp.getLeft();
-      lastInQueue = temp.getLeft();
-      System.out.println("Retrieving request "+temp.getRequestValue()+"... done.");
-      return;
+
+      lastInQueue = temp.getRight();
+
     }
 
     firstToServe = temp.getRight();
