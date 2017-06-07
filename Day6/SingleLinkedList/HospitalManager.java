@@ -41,6 +41,20 @@ public class HospitalManager {
     return false;
   }
 
+  public int Queue() {
+
+    return Queue(firstPatient);
+  }
+
+  private int Queue(Patient firstPatientInQueue) {
+    if(firstPatientInQueue == null) {
+      return 0;
+    } else {
+      return 1 + Queue(firstPatientInQueue.getNextPatient());
+    }
+
+  }
+
 
   public void printList() {
     Patient temp = firstPatient;

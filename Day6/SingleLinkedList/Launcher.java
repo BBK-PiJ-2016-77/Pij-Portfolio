@@ -43,6 +43,8 @@ public class Launcher {
     myManager.deletePatient("P1");
     myManager.printList();
 
+    System.out.println(myManager.Queue());
+
 
 
   }
