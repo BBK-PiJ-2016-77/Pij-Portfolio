@@ -18,7 +18,7 @@ public class DllHospitalManager {
         current = current.getNextPatient();
       }
       current.setNextPatient(newPatient);
-      current.getNextPatient().setPreviousPatient(current);
+      newPatient.setPreviousPatient(current);
     }
 
     public boolean deletePatient(String name) {
@@ -29,16 +29,15 @@ public class DllHospitalManager {
       if(firstPatient.getPatientsName().equals(name)) {
         firstPatient = firstPatient.getNextPatient();
         firstPatient.setPreviousPatient(null);
-        firstPatient.getNextPatient().setPreviousPatient(firstPatient);
         return true;
       }
 
       DllPatient current = firstPatient;
-      while(current.getNextPatient() !=null) {
+      while(current !=null) {
 
-        if(current.getNextPatient().getPatientsName().equals(name)) {
-          current.setNextPatient(current.getNextPatient().getNextPatient());
-          current.getNextPatient().setPreviousPatient(current);
+        if(current.getPatientsName().equals(name)) {
+          current.getPreviousPatient().setNextPatient(current.getNextPatient());
+          current.getNextPatient().setPreviousPatient(current.getPreviousPatient());
           return true;
         }
         current = current.getNextPatient();
