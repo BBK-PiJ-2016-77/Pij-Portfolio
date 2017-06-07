@@ -22,5 +22,10 @@ public class Person {
 
   public void setAfterYou(Person person) { afterYou = person;}
 
-  
+  public String getName() { return name;}
+
+  public int getAge() {return age;}
+
+
+
 }

@@ -18,7 +18,7 @@ public class Queue {
       System.out.println("Inserting request "+ readRequest.getRequestValue()+ "...");
       return;
     }
-    
+
     temp.setRight(readRequest);
     readRequest.setLeft(temp);
 

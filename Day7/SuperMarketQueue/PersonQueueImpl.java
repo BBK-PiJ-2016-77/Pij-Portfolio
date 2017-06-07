@@ -21,6 +21,11 @@ public class PersonQueueImpl implements PersonQueue {
 
   @Override
   public Person retrieve() {
+
+    if(headOfQueue == null) {
+      return null;
+    }
+
     Person temp = headOfQueue;
     if(temp.getAfterYou() == null) {
       tailOfQueue = null;
@@ -28,5 +33,16 @@ public class PersonQueueImpl implements PersonQueue {
     }
     headOfQueue = temp.getAfterYou();
     return temp;
+  }
+
+  public String toString() {
+    Person temp = headOfQueue;
+    String result = "";
+    while(temp != null) {
+      result += "\tCustomer: " + temp.getName() + "\tAge: " + temp.getAge()+"\n";
+      temp = temp.getAfterYou();
+    }
+
+    return result;
   }
 }
