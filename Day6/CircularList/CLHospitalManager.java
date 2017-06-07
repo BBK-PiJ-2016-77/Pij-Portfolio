@@ -12,11 +12,11 @@ public class CLHospitalManager {
     }
 
     CLPatient current = this.firstPatient;
-    while(current.getNextPatient() != null) {
+    while(current.getNextPatient() != firstPatient) {
       current = current.getNextPatient();
     }
     current.setNextPatient(newPatient);
-    current.getNextPatient().setNextPatient(firstPatient);
+    newPatient.setNextPatient(firstPatient);
   }
 
   public boolean deletePatient(String name) {
@@ -67,11 +67,10 @@ public class CLHospitalManager {
   public void printList() {
     CLPatient temp = firstPatient;
 
-    while(temp!=null) {
+    do{
       System.out.println("Name: "+ temp.getPatientsName() + "\tAge: "+temp.getPatientsAge()+
               "\t Illeness: "+temp.getPatientsIlleness());
       temp = temp.getNextPatient();
-
-    }
+    }while(temp != firstPatient);
   }
 }
