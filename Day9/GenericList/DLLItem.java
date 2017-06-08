@@ -27,7 +27,7 @@ public class DLLItem<T> {
       nextItem.setPreviousItem(this);
       return;
     }
-    System.out.println("Testing with" + getValue());
+
     if(nextItem!= null) { nextItem.delete(item);}
   }
 
