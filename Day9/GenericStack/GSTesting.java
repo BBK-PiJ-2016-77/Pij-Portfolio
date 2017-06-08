@@ -1,7 +1,7 @@
 package GenericStack;
 
 
-public class GStesting {
+public class GSTesting {
 
   public static void main(String[] args){
     GStack myStack = new GStack();
@@ -20,6 +20,9 @@ public class GStesting {
     myStack.pop();
     System.out.println();
     System.out.println(myStack.isEmpty());
+
+
+
   }
 
 }

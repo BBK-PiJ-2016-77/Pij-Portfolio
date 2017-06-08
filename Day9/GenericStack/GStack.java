@@ -1,6 +1,6 @@
 package GenericStack;
 
-public class GStack<T> {
+public class GStack<T extends Number> {
 
   private Item itemOnTop;
 

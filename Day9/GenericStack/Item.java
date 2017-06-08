@@ -1,13 +1,13 @@
 package GenericStack;
 
 
-public class Item<Number> {
+public class Item<T extends Number> {
 
   private Item beforeItem;
   private Item afterItem;
-  private Number value;
+  private T value;
 
-  public Item(Number value){
+  public Item(T value){
     this.value = value;
   }
 
@@ -19,6 +19,6 @@ public class Item<Number> {
 
   public void setAfterItem(Item item) {afterItem = item;}
 
-  public Number getValue() {return value;}
+  public T getValue() {return value;}
 
 }
